@@ -1,0 +1,16 @@
+# LaTeX intermediate
+*.bib
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.run.xml
+*.synctex.gz
+
+# Temporaries
+*.swp
+
