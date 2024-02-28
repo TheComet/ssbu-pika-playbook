@@ -14,5 +14,9 @@
 /pika-playbook-blx.bib
 *.bcf
 
+# Graphviz
+*.dot
+*.pdf
+
 # Temporaries
 *.swp

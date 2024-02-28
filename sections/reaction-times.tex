@@ -1,0 +1,43 @@
+\section{Reaction Times}
+\label{sec:reaction-times}
+
+The common assertion is that a player's reaction time is 18 frames, and thus, any move that has a startup time longer than 18 frames is always reactable.
+
+This is \textbf{quite wrong} for three reasons.
+
+First, you can't always recognize or distinguish what is happening on the very first frame of a move. For example, figure \ref{fig:reaction-times:ledge-options-frame-1} shows the first frame of three different ledge options. Can you tell which is which? No, the animations only start differing many frames later. While you may be able to react to the start of an animation within 18 frames, you won't be able to tell which option it is until much later.
+
+Secondly, there are actually two different types of reactions. 18 frames refers to the ``Single Response Time (SRT)'' reaction. You have already predicted what they are going to do, but you don't know when they are going to do it. A single stimulus triggers your response, and this response time is said to be 18 frames.
+
+The second type of reaction is called ``Choice Response Time (CRT)''. Here, you don't know what they are going to do, and you also don't know when they are going to do it. This type of reaction takes much longer -- around 30 frames, in fact -- because you have to react to the initial stimulus and on top of that also differentiate what they are doing so you can \emph{choose} an appropriate response.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subcaptionblock}[t]{0.48\linewidth}
+        \resizebox{\linewidth}{!}{\digraph{srt}{
+            pad=0;
+            rankdir=LR;
+            subgraph {
+                a [shape="record", label="Situation"];
+                b [shape="record", label="Response"];
+                a->b [label="Stimulus"];
+            }
+        }}
+        \caption{Single Response Time (SRT)}
+    \end{subcaptionblock}
+    \hfill
+    \begin{subcaptionblock}[t]{0.48\linewidth}
+        \resizebox{\linewidth}{!}{\digraph{crt}{
+            pad=0;
+            rankdir=LR;
+            subgraph {
+                a [shape="record", label="Situation"];
+                b [shape="record", label="Response 1"];
+                c [shape="record", label="Response 2"];
+                a->b [label="Stimulus 1"];
+                a->c [label="Stimulus 2"];
+            }
+        }}
+        \caption{Choice Response Time (CRT)}
+    \end{subcaptionblock}
+\end{figure}
